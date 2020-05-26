@@ -1,0 +1,6 @@
+framework module Pods_GooseTests {
+  umbrella header "Pods-GooseTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

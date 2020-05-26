@@ -1,0 +1,6 @@
+framework module Pods_Goose {
+  umbrella header "Pods-Goose-umbrella.h"
+
+  export *
+  module * { export * }
+}

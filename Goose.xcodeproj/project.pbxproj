@@ -3,10 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B25097C50ACAA52324070B5 /* Pods_GooseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B99FC540492C0F8D6FCE853B /* Pods_GooseUITests.framework */; };
+		874D467AF0670EE7DA7F6238 /* Pods_GooseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B054706CC9BCD1E8028683 /* Pods_GooseTests.framework */; };
+		8E0461FF2A4F8F5812B0368B /* Pods_Goose.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40D58CE18E95BDCC0364520E /* Pods_Goose.framework */; };
+		BC2AF540246DFB26001E311F /* CatalogueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2AF53F246DFB26001E311F /* CatalogueView.swift */; };
+		BC2DCE60246DF40C00395390 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2DCE55246DF40B00395390 /* Subject.swift */; };
+		BC2DCE61246DF40C00395390 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2DCE56246DF40B00395390 /* Group.swift */; };
+		BC2DCE63246DF40C00395390 /* GroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2DCE58246DF40B00395390 /* GroupModel.swift */; };
+		BC2DCE64246DF40C00395390 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2DCE59246DF40B00395390 /* Course.swift */; };
+		BC2DCE65246DF40C00395390 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2DCE5A246DF40B00395390 /* Client.swift */; };
+		BC2DCE66246DF40C00395390 /* SubjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2DCE5B246DF40B00395390 /* SubjectModel.swift */; };
+		BC2DCE68246DF40C00395390 /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2DCE5D246DF40B00395390 /* AppFonts.swift */; };
+		BC2DCE69246DF40C00395390 /* CatalogueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2DCE5E246DF40B00395390 /* CatalogueModel.swift */; };
+		BC2DCE6A246DF40C00395390 /* GoldenRatio.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2DCE5F246DF40C00395390 /* GoldenRatio.swift */; };
 		BC314E472422565E00662B34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC314E462422565E00662B34 /* AppDelegate.swift */; };
 		BC314E492422565E00662B34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC314E482422565E00662B34 /* SceneDelegate.swift */; };
 		BC314E4B2422565E00662B34 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC314E4A2422565E00662B34 /* ContentView.swift */; };
@@ -15,6 +28,20 @@
 		BC314E532422565F00662B34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC314E512422565F00662B34 /* LaunchScreen.storyboard */; };
 		BC314E5E2422566000662B34 /* GooseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC314E5D2422566000662B34 /* GooseTests.swift */; };
 		BC314E692422566000662B34 /* GooseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC314E682422566000662B34 /* GooseUITests.swift */; };
+		BC314E772422587700662B34 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BC314E762422587700662B34 /* Localizable.strings */; };
+		BC3845AB246E297400C1E47D /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2DCE6C246DF42A00395390 /* AppColors.swift */; };
+		BC3845AD246E2B5000C1E47D /* AppNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3845AC246E2B5000C1E47D /* AppNumbers.swift */; };
+		BC3845AF246E387500C1E47D /* MockClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3845AE246E387500C1E47D /* MockClient.swift */; };
+		BC3845B1246E392500C1E47D /* groups.json in Resources */ = {isa = PBXBuildFile; fileRef = BC3845B0246E392500C1E47D /* groups.json */; };
+		BC934819246E5D62001BC2C2 /* subjects.json in Resources */ = {isa = PBXBuildFile; fileRef = BC934818246E5D62001BC2C2 /* subjects.json */; };
+		BCB33B332474BDE60059DEB7 /* SubjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB33B322474BDE60059DEB7 /* SubjectView.swift */; };
+		BCB33B352474D5F30059DEB7 /* SubjectCatalogueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB33B342474D5F30059DEB7 /* SubjectCatalogueView.swift */; };
+		BCB33B372474D6210059DEB7 /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB33B362474D6210059DEB7 /* CourseView.swift */; };
+		BCB33B392474DE850059DEB7 /* ShadowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB33B382474DE850059DEB7 /* ShadowModifier.swift */; };
+		BCE31255246F7CDB002848D0 /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE31254246F7CDB002848D0 /* GroupView.swift */; };
+		BCE31257246F842B002848D0 /* GroupCatalogueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE31256246F842B002848D0 /* GroupCatalogueView.swift */; };
+		BCE6D166246F3A5100879755 /* GroupSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE6D165246F3A5100879755 /* GroupSlider.swift */; };
+		BCE6D16A246F3DA400879755 /* HeaderViewModifer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE6D169246F3DA400879755 /* HeaderViewModifer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +62,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		40D58CE18E95BDCC0364520E /* Pods_Goose.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Goose.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75A756E11445F700EEEB12F9 /* Pods-GooseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GooseUITests.debug.xcconfig"; path = "Target Support Files/Pods-GooseUITests/Pods-GooseUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8F149C575B38166722FCEA16 /* Pods-Goose.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Goose.release.xcconfig"; path = "Target Support Files/Pods-Goose/Pods-Goose.release.xcconfig"; sourceTree = "<group>"; };
+		9F80C55489F1FB7FFD73D73A /* Pods-GooseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GooseTests.debug.xcconfig"; path = "Target Support Files/Pods-GooseTests/Pods-GooseTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A0AF57841B5F05A44D5EFCAD /* Pods-Goose.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Goose.debug.xcconfig"; path = "Target Support Files/Pods-Goose/Pods-Goose.debug.xcconfig"; sourceTree = "<group>"; };
+		B6F74F7390CA95FF8F9AB7F9 /* Pods-GooseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GooseTests.release.xcconfig"; path = "Target Support Files/Pods-GooseTests/Pods-GooseTests.release.xcconfig"; sourceTree = "<group>"; };
+		B99FC540492C0F8D6FCE853B /* Pods_GooseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GooseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC2AF53F246DFB26001E311F /* CatalogueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueView.swift; sourceTree = "<group>"; };
+		BC2DCE55246DF40B00395390 /* Subject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
+		BC2DCE56246DF40B00395390 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		BC2DCE58246DF40B00395390 /* GroupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupModel.swift; sourceTree = "<group>"; };
+		BC2DCE59246DF40B00395390 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		BC2DCE5A246DF40B00395390 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		BC2DCE5B246DF40B00395390 /* SubjectModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectModel.swift; sourceTree = "<group>"; };
+		BC2DCE5D246DF40B00395390 /* AppFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
+		BC2DCE5E246DF40B00395390 /* CatalogueModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogueModel.swift; sourceTree = "<group>"; };
+		BC2DCE5F246DF40C00395390 /* GoldenRatio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoldenRatio.swift; sourceTree = "<group>"; };
+		BC2DCE6C246DF42A00395390 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		BC2DCE6D246DF42A00395390 /* AppStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStrings.swift; sourceTree = "<group>"; };
 		BC314E432422565E00662B34 /* Goose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Goose.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC314E462422565E00662B34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC314E482422565E00662B34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +95,21 @@
 		BC314E642422566000662B34 /* GooseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GooseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC314E682422566000662B34 /* GooseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooseUITests.swift; sourceTree = "<group>"; };
 		BC314E6A2422566000662B34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC314E762422587700662B34 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		BC3845AC246E2B5000C1E47D /* AppNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNumbers.swift; sourceTree = "<group>"; };
+		BC3845AE246E387500C1E47D /* MockClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockClient.swift; sourceTree = "<group>"; };
+		BC3845B0246E392500C1E47D /* groups.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = groups.json; sourceTree = "<group>"; };
+		BC934818246E5D62001BC2C2 /* subjects.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = subjects.json; sourceTree = "<group>"; };
+		BCB33B322474BDE60059DEB7 /* SubjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectView.swift; sourceTree = "<group>"; };
+		BCB33B342474D5F30059DEB7 /* SubjectCatalogueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectCatalogueView.swift; sourceTree = "<group>"; };
+		BCB33B362474D6210059DEB7 /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
+		BCB33B382474DE850059DEB7 /* ShadowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowModifier.swift; sourceTree = "<group>"; };
+		BCE31254246F7CDB002848D0 /* GroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupView.swift; sourceTree = "<group>"; };
+		BCE31256246F842B002848D0 /* GroupCatalogueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCatalogueView.swift; sourceTree = "<group>"; };
+		BCE6D165246F3A5100879755 /* GroupSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupSlider.swift; sourceTree = "<group>"; };
+		BCE6D169246F3DA400879755 /* HeaderViewModifer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewModifer.swift; sourceTree = "<group>"; };
+		C11EE5B60A698D8D98508C53 /* Pods-GooseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GooseUITests.release.xcconfig"; path = "Target Support Files/Pods-GooseUITests/Pods-GooseUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C6B054706CC9BCD1E8028683 /* Pods_GooseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GooseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E0461FF2A4F8F5812B0368B /* Pods_Goose.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				874D467AF0670EE7DA7F6238 /* Pods_GooseTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +133,67 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B25097C50ACAA52324070B5 /* Pods_GooseUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0926BCBB4E951B556227E422 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A0AF57841B5F05A44D5EFCAD /* Pods-Goose.debug.xcconfig */,
+				8F149C575B38166722FCEA16 /* Pods-Goose.release.xcconfig */,
+				9F80C55489F1FB7FFD73D73A /* Pods-GooseTests.debug.xcconfig */,
+				B6F74F7390CA95FF8F9AB7F9 /* Pods-GooseTests.release.xcconfig */,
+				75A756E11445F700EEEB12F9 /* Pods-GooseUITests.debug.xcconfig */,
+				C11EE5B60A698D8D98508C53 /* Pods-GooseUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BC2DCE6B246DF41700395390 /* App Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				BC2DCE5F246DF40C00395390 /* GoldenRatio.swift */,
+				BC2DCE6D246DF42A00395390 /* AppStrings.swift */,
+			);
+			path = "App Utilities";
+			sourceTree = "<group>";
+		};
+		BC2DCE6E246DF44A00395390 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BC2DCE5A246DF40B00395390 /* Client.swift */,
+				BC2DCE59246DF40B00395390 /* Course.swift */,
+				BC2DCE56246DF40B00395390 /* Group.swift */,
+				BC2DCE55246DF40B00395390 /* Subject.swift */,
+				BC3845AE246E387500C1E47D /* MockClient.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BC2DCE6F246DF49800395390 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				BC314E462422565E00662B34 /* AppDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		BC2DCE70246DF4C000395390 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				BC314E4C2422565F00662B34 /* Assets.xcassets */,
+				BC934818246E5D62001BC2C2 /* subjects.json */,
+				BC314E512422565F00662B34 /* LaunchScreen.storyboard */,
+				BC3845B0246E392500C1E47D /* groups.json */,
+				BC314E762422587700662B34 /* Localizable.strings */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		BC314E3A2422565E00662B34 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +201,8 @@
 				BC314E5C2422566000662B34 /* GooseTests */,
 				BC314E672422566000662B34 /* GooseUITests */,
 				BC314E442422565E00662B34 /* Products */,
+				0926BCBB4E951B556227E422 /* Pods */,
+				FF04AD45FE4A9DC8F9AC7C2F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +219,13 @@
 		BC314E452422565E00662B34 /* Goose */ = {
 			isa = PBXGroup;
 			children = (
-				BC314E462422565E00662B34 /* AppDelegate.swift */,
-				BC314E482422565E00662B34 /* SceneDelegate.swift */,
-				BC314E4A2422565E00662B34 /* ContentView.swift */,
-				BC314E4C2422565F00662B34 /* Assets.xcassets */,
-				BC314E512422565F00662B34 /* LaunchScreen.storyboard */,
 				BC314E542422565F00662B34 /* Info.plist */,
+				BC2DCE70246DF4C000395390 /* Assets */,
+				BC2DCE6F246DF49800395390 /* Delegates */,
+				BC2DCE6E246DF44A00395390 /* Model */,
+				BC2DCE6B246DF41700395390 /* App Utilities */,
 				BC314E4E2422565F00662B34 /* Preview Content */,
+				BC9A7CD82425A50500858CE4 /* Catalogue */,
 			);
 			path = Goose;
 			sourceTree = "<group>";
@@ -136,6 +256,40 @@
 			path = GooseUITests;
 			sourceTree = "<group>";
 		};
+		BC9A7CD82425A50500858CE4 /* Catalogue */ = {
+			isa = PBXGroup;
+			children = (
+				BC314E482422565E00662B34 /* SceneDelegate.swift */,
+				BC2DCE5D246DF40B00395390 /* AppFonts.swift */,
+				BC2DCE6C246DF42A00395390 /* AppColors.swift */,
+				BC3845AC246E2B5000C1E47D /* AppNumbers.swift */,
+				BC2DCE58246DF40B00395390 /* GroupModel.swift */,
+				BC2DCE5B246DF40B00395390 /* SubjectModel.swift */,
+				BC2DCE5E246DF40B00395390 /* CatalogueModel.swift */,
+				BC314E4A2422565E00662B34 /* ContentView.swift */,
+				BC2AF53F246DFB26001E311F /* CatalogueView.swift */,
+				BCB33B322474BDE60059DEB7 /* SubjectView.swift */,
+				BCB33B342474D5F30059DEB7 /* SubjectCatalogueView.swift */,
+				BCB33B362474D6210059DEB7 /* CourseView.swift */,
+				BCB33B382474DE850059DEB7 /* ShadowModifier.swift */,
+				BCE6D169246F3DA400879755 /* HeaderViewModifer.swift */,
+				BCE31256246F842B002848D0 /* GroupCatalogueView.swift */,
+				BCE6D165246F3A5100879755 /* GroupSlider.swift */,
+				BCE31254246F7CDB002848D0 /* GroupView.swift */,
+			);
+			path = Catalogue;
+			sourceTree = "<group>";
+		};
+		FF04AD45FE4A9DC8F9AC7C2F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40D58CE18E95BDCC0364520E /* Pods_Goose.framework */,
+				C6B054706CC9BCD1E8028683 /* Pods_GooseTests.framework */,
+				B99FC540492C0F8D6FCE853B /* Pods_GooseUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,9 +297,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC314E6D2422566000662B34 /* Build configuration list for PBXNativeTarget "Goose" */;
 			buildPhases = (
+				9101E72C0747A97F6244D51A /* [CP] Check Pods Manifest.lock */,
 				BC314E3F2422565E00662B34 /* Sources */,
 				BC314E402422565E00662B34 /* Frameworks */,
 				BC314E412422565E00662B34 /* Resources */,
+				9FBE8BD1DD4BF9B1E0C6B92D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -160,6 +316,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC314E702422566000662B34 /* Build configuration list for PBXNativeTarget "GooseTests" */;
 			buildPhases = (
+				E52BC25CE02E888351C92434 /* [CP] Check Pods Manifest.lock */,
 				BC314E552422566000662B34 /* Sources */,
 				BC314E562422566000662B34 /* Frameworks */,
 				BC314E572422566000662B34 /* Resources */,
@@ -178,6 +335,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC314E732422566000662B34 /* Build configuration list for PBXNativeTarget "GooseUITests" */;
 			buildPhases = (
+				D18F4C1C8134B70AA00B5486 /* [CP] Check Pods Manifest.lock */,
 				BC314E602422566000662B34 /* Sources */,
 				BC314E612422566000662B34 /* Frameworks */,
 				BC314E622422566000662B34 /* Resources */,
@@ -241,7 +399,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC314E532422565F00662B34 /* LaunchScreen.storyboard in Resources */,
+				BC314E772422587700662B34 /* Localizable.strings in Resources */,
+				BC934819246E5D62001BC2C2 /* subjects.json in Resources */,
 				BC314E502422565F00662B34 /* Preview Assets.xcassets in Resources */,
+				BC3845B1246E392500C1E47D /* groups.json in Resources */,
 				BC314E4D2422565F00662B34 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,12 +423,119 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9101E72C0747A97F6244D51A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Goose-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FBE8BD1DD4BF9B1E0C6B92D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Goose/Pods-Goose-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Goose/Pods-Goose-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Goose/Pods-Goose-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D18F4C1C8134B70AA00B5486 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GooseUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E52BC25CE02E888351C92434 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GooseTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BC314E3F2422565E00662B34 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC2DCE64246DF40C00395390 /* Course.swift in Sources */,
+				BCB33B372474D6210059DEB7 /* CourseView.swift in Sources */,
+				BCE31255246F7CDB002848D0 /* GroupView.swift in Sources */,
+				BC2DCE65246DF40C00395390 /* Client.swift in Sources */,
+				BC2DCE63246DF40C00395390 /* GroupModel.swift in Sources */,
+				BC2DCE6A246DF40C00395390 /* GoldenRatio.swift in Sources */,
+				BC3845AF246E387500C1E47D /* MockClient.swift in Sources */,
+				BC3845AD246E2B5000C1E47D /* AppNumbers.swift in Sources */,
+				BC2DCE69246DF40C00395390 /* CatalogueModel.swift in Sources */,
+				BCE6D166246F3A5100879755 /* GroupSlider.swift in Sources */,
+				BCE31257246F842B002848D0 /* GroupCatalogueView.swift in Sources */,
+				BCE6D16A246F3DA400879755 /* HeaderViewModifer.swift in Sources */,
+				BCB33B392474DE850059DEB7 /* ShadowModifier.swift in Sources */,
+				BC2AF540246DFB26001E311F /* CatalogueView.swift in Sources */,
 				BC314E472422565E00662B34 /* AppDelegate.swift in Sources */,
+				BC2DCE68246DF40C00395390 /* AppFonts.swift in Sources */,
+				BC2DCE60246DF40C00395390 /* Subject.swift in Sources */,
+				BC2DCE61246DF40C00395390 /* Group.swift in Sources */,
+				BCB33B332474BDE60059DEB7 /* SubjectView.swift in Sources */,
+				BC2DCE66246DF40C00395390 /* SubjectModel.swift in Sources */,
+				BC3845AB246E297400C1E47D /* AppColors.swift in Sources */,
+				BCB33B352474D5F30059DEB7 /* SubjectCatalogueView.swift in Sources */,
 				BC314E492422565E00662B34 /* SceneDelegate.swift in Sources */,
 				BC314E4B2422565E00662B34 /* ContentView.swift in Sources */,
 			);
@@ -432,6 +700,7 @@
 		};
 		BC314E6E2422566000662B34 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0AF57841B5F05A44D5EFCAD /* Pods-Goose.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -452,6 +721,7 @@
 		};
 		BC314E6F2422566000662B34 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F149C575B38166722FCEA16 /* Pods-Goose.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -472,6 +742,7 @@
 		};
 		BC314E712422566000662B34 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F80C55489F1FB7FFD73D73A /* Pods-GooseTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -494,6 +765,7 @@
 		};
 		BC314E722422566000662B34 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6F74F7390CA95FF8F9AB7F9 /* Pods-GooseTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -516,6 +788,7 @@
 		};
 		BC314E742422566000662B34 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75A756E11445F700EEEB12F9 /* Pods-GooseUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -536,6 +809,7 @@
 		};
 		BC314E752422566000662B34 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C11EE5B60A698D8D98508C53 /* Pods-GooseUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
