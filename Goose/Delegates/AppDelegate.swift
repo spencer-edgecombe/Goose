@@ -11,27 +11,29 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    
-    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.appBody], for: .normal)
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.appBody], for: .selected)
-        
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.appLabel], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.appLabel], for: .selected)
         let navigationBarAppearance: UINavigationBarAppearance = UINavigationBarAppearance()
         
         navigationBarAppearance.largeTitleTextAttributes = [NSAttributedString.Key.font: UIFont.appLargeTitle]
-        
+        navigationBarAppearance.titleTextAttributes = [NSAttributedString.Key.font: UIFont.appSubheading]
+        navigationBarAppearance.backgroundColor = .appBarBackground
+        navigationBarAppearance.shadowColor = .clear
+        navigationBarAppearance.shadowImage = nil
+        navigationBarAppearance.backgroundEffect = UIBlurEffect(style: .extraLight)
         UINavigationBar.appearance().standardAppearance = navigationBarAppearance
         
         let tabBarAppearance: UITabBarAppearance = UITabBarAppearance()
         
         tabBarAppearance.shadowImage = nil
         tabBarAppearance.shadowColor = .clear
-        tabBarAppearance.backgroundColor = .appBackground
-    
+        tabBarAppearance.backgroundColor = .appBarBackground
+        tabBarAppearance.backgroundEffect = UIBlurEffect(style: .regular)
+            
+        UITabBar.appearance().standardAppearance = tabBarAppearance
         
         return true
     }

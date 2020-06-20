@@ -3,4 +3,70 @@
    uuid = "3E277172-CE5C-4CC0-A425-8A4C15084E81"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F43A818A-D341-4BBA-9F1B-E8D42EB7D214"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Goose/Catalogue/CourseModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "loadCourses(completionHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F43A818A-D341-4BBA-9F1B-E8D42EB7D214 - 5ef975f7049bfbf2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Goose.CourseModel.loadCourses(completionHandler: (Swift.Optional&lt;Goose.CourseDetails&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Goose"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/spencer.edgecombe/workspace/Goose/Goose/Catalogue/CourseModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "F43A818A-D341-4BBA-9F1B-E8D42EB7D214 - 47c42a7c5f060135"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Goose.CourseDetails&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Goose.CourseModel.loadCourses(completionHandler: (Swift.Optional&lt;Goose.CourseDetails&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Goose"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/spencer.edgecombe/workspace/Goose/Goose/Catalogue/CourseModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "280">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F1BDFC0E-057F-4827-BD20-ECA798F13DD6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Goose/Catalogue/CourseModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "loadCourses(completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

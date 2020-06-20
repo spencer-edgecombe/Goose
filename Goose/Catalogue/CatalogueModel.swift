@@ -20,9 +20,7 @@ class CatalogueModel {
         mockLoadSubjects()
     }
     
-    func loadSubjects(completionHandler: @escaping () -> ()) {
-        
-            
+    func loadSubjects(completionHandler: @escaping ([Subject]) -> ()) {
         Client.shared.subjects { [weak self] (subjects, error) in
             if let weakSelf = self {
                 if let error = error {
@@ -32,12 +30,12 @@ class CatalogueModel {
                 }
             }
             DispatchQueue.main.async {
-                completionHandler()
+                completionHandler(subjects)
             }
         }
     }
     
-    func loadGroups(completionHandler: @escaping () -> ()) {
+    func loadGroups(completionHandler: @escaping ([Group]) -> ()) {
         Client.shared.groups { [weak self] (groups, error) in
             if let weakSelf = self {
                 if let error = error {
@@ -47,7 +45,7 @@ class CatalogueModel {
                 }
             }
             DispatchQueue.main.async {
-                completionHandler()
+                completionHandler(groups)
             }
         }
     }

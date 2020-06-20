@@ -16,9 +16,10 @@ class SubjectModel {
     
     init(subject: Subject) {
         self.subject = subject
+
     }
     
-    func loadCourses(completionHandler: @escaping () -> ()) {
+    func loadCourses(completionHandler: @escaping ([Course]) -> ()) {
         Client.shared.courses(for: subject.name) {[weak self] (courses, error) in
             if let weakSelf = self {
                 if let error = error {
@@ -28,8 +29,14 @@ class SubjectModel {
                 }
             }
             DispatchQueue.main.async {
-                completionHandler()
+                completionHandler(courses)
             }
+        }
+    }
+    
+    func mockLoadCourses() {
+        if let courses = MockClient.courses() {
+            self.courses = courses
         }
     }
     

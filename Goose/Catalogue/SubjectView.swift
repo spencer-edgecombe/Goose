@@ -24,15 +24,16 @@ struct SubjectView: View {
             HStack {
                     Text(subject.name)
                         .font(.appSubheading)
-                        .frame(maxWidth: width.divide(by: 4), alignment: .leading)
+                        .frame(maxWidth: width.divide(by: 3), alignment: .leading)
                         .padding(.leading, CGFloat.spacing.multiply(by: 2))
                         .foregroundColor(Color(Goose.groupColor(group: subject.group)))
                     Text(subject.description)
                         .font(.appLabel)
                         .fixedSize(horizontal: false, vertical: true)
                         .multilineTextAlignment(.trailing)
-                        .frame(maxWidth: width.multiply(by: 3/4), alignment: .trailing)
+                        .frame(maxWidth: width.multiply(by: 2/3), alignment: .trailing)
                         .padding(.trailing, CGFloat.spacing.multiply(by: 2))
+                        .foregroundColor(.primary)
 
                 }
             }

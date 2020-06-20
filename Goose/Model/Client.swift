@@ -32,6 +32,10 @@ class Client {
         return "/courses/\(subjectName).json"
     }
     
+    func courseDetailsUri(subjectName: String, courseNumber: String) -> String {
+        return "/courses/\(subjectName)/\(courseNumber).json"
+    }
+    
     
     func subjects(completionHandler: @escaping ([Subject], Error?) -> ()) {
         let url = endpoint(uri: subjectsUri)
@@ -83,6 +87,33 @@ class Client {
             }
         }
     }
+    
+
+    func courseDetails(for subjectName: String, courseNumber: String, completionHandler: @escaping (CourseDetails?, Error?) -> ()) {
+        let url = endpoint(uri: courseDetailsUri(subjectName: subjectName, courseNumber: courseNumber))
+        let parameters = defaultParameters
+        get(urlString: url, parameters: parameters) {
+            data, error in
+            if let error = error {
+                DispatchQueue.main.async {
+                   completionHandler(nil, error)
+               }
+            } else if let data = data as? Any {
+                do {
+                    let jsonData = try JSONSerialization.data(withJSONObject: data, options: .prettyPrinted)
+                    let courseDetails: CourseDetails = try! JSONDecoder().decode(CourseDetails.self, from: jsonData)
+                    DispatchQueue.main.async {
+                        completionHandler(courseDetails, nil)
+                    }
+                } catch (let error) {
+                    DispatchQueue.main.async {
+                        completionHandler(nil, error)
+                    }
+                }
+            }
+        }
+    }
+
     
     func courses(for subjectName: String, completionHandler: @escaping ([Course], Error?) -> ()) {
         let url = endpoint(uri: coursesUri(subjectName: subjectName))

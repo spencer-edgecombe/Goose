@@ -47,6 +47,10 @@ struct FontSize {
     static var body: CGFloat {
         return largeTitle / CGFloat.phi.power(of: 2)
     }
+    
+    static var small: CGFloat {
+        return largeTitle / CGFloat.phi.power(of: 2.5)
+    }
 }
 
 extension UIFont {
@@ -62,6 +66,13 @@ extension UIFont {
     
     static func semiboldRounded(withSize size: CGFloat) -> UIFont {
         if let descriptor = UIFont.systemFont(ofSize: size, weight: .semibold).fontDescriptor.withDesign(.rounded)  {
+            return UIFont(descriptor: descriptor, size: size)
+        }
+        return UIFont.systemFont(ofSize: size)
+    }
+    
+    static func regularRounded(withSize size: CGFloat) -> UIFont {
+        if let descriptor = UIFont.systemFont(ofSize: size, weight: .regular).fontDescriptor.withDesign(.rounded)  {
             return UIFont(descriptor: descriptor, size: size)
         }
         return UIFont.systemFont(ofSize: size)
@@ -100,7 +111,11 @@ extension UIFont {
     }
     
     static var appBody: UIFont {
-        return semiboldRounded(withSize: FontSize.body)
+        return regularRounded(withSize: FontSize.body)
+    }
+    
+    static var appSmall: UIFont {
+        return heavyRounded(withSize: FontSize.small)
     }
     
 }
@@ -113,6 +128,10 @@ extension Font {
     
     static func semiboldRounded(withSize size: CGFloat) -> Font {
         return Font.system(size: size, weight: .semibold, design: .rounded)
+    }
+    
+    static func regularRounded(withSize size: CGFloat) -> Font {
+        return Font.system(size: size, weight: .regular, design: .rounded)
     }
     
     static var appXXXLarge: Font {
@@ -148,7 +167,11 @@ extension Font {
     }
     
     static var appBody: Font {
-        return semiboldRounded(withSize: FontSize.body)
+        return regularRounded(withSize: FontSize.body)
+    }
+    
+    static var appSmall: Font {
+        return heavyRounded(withSize: FontSize.small)
     }
     
 }

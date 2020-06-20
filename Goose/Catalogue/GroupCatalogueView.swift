@@ -14,13 +14,15 @@ struct GroupCatalogueView: View {
     var body: some View {
         
         GeometryReader { parentView in
-            ScrollView {
+            ScrollView(showsIndicators: false) {
                 Divider()
                     .padding()
                 Text(self.group.name)
                     .modifier(HeaderViewModifier())
                 ForEach (self.subjects, id: \.self) { subject in
-                    SubjectView(subject: subject, width: parentView.size.width-CGFloat.spacing.multiply(by: 2))
+                    NavigationLink(destination:SubjectCatalogueView(subjectModel: SubjectModel(subject: subject))) {
+                        SubjectView(subject: subject, width: parentView.size.width-CGFloat.spacing.multiply(by: 2))
+                    }
                 }
             }
         }

@@ -19,7 +19,7 @@ func groupColor(group: GroupCode) -> UIColor {
     case .ART:
         return UIColor.systemOrange
     case .SCI:
-        return UIColor.systemBlue
+        return UIColor.systemIndigo
     case .AHS:
         return UIColor.systemTeal
     case .MAT:

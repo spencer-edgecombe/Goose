@@ -37,6 +37,17 @@ class MockClient {
         }
         return nil
     }
+    static func courses() -> [Course]?{
+        if let jsonData = MockClient.json(filename: "courses") {
+            do {
+                let courses: [Course] = try! JSONDecoder().decode([Course].self, from: jsonData)
+                return courses
+            } catch (let error) {
+                return nil
+            }
+        }
+        return nil
+    }
     
     static func subjects() -> [Subject]?{
         if let jsonData = MockClient.json(filename: "subjects") {

@@ -14,12 +14,18 @@ struct GroupSlider: View {
     
     var groupViewWidth: CGFloat
     
+    var groupViewHeight: CGFloat {
+        return groupViewWidth.divide(by: CGFloat.phi.power(of: 0.5))
+    }
+    
+    @State var groups = [Group]()
+    
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             VStack {
                 Spacer(minLength: 2*CGFloat.spacing)
                 HStack {
-                    ForEach(model.groups, id: \.self) {
+                    ForEach(groups, id: \.self) {
                         group in
                         HStack{
                             Spacer(minLength: CGFloat.spacing)
@@ -29,8 +35,16 @@ struct GroupSlider: View {
                         }
                     }
                 }
-            .padding(.bottom, .spacing)
+                .frame(minHeight: groupViewHeight)
+                .padding(.bottom, .spacing)
             }
+        }
+    .onAppear(perform: loadData)
+    }
+    
+    func loadData() {
+        model.loadGroups { groups in
+            self.groups = groups
         }
     }
 }

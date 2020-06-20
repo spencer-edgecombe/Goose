@@ -11,7 +11,8 @@ import SwiftUI
 struct CatalogueView: View {
     
     var model: CatalogueModel
-    
+    @State var subjects = [Subject]()
+
     func groupViewWidth(width: CGFloat) -> CGFloat {
         return width.advanced(by: -CGFloat.spacing.multiply(by: 2)).divide(by: CGFloat.phi)
     }
@@ -28,34 +29,37 @@ struct CatalogueView: View {
             NavigationView {
                 GeometryReader {
                 parentView in
-                ScrollView {
-                    VStack{
-                        Divider()
-                            .padding(Edge.Set(arrayLiteral: .leading, .trailing, .bottom, .top))
-                        Text("Groups")
-                            .modifier(HeaderViewModifier())
-                            .padding(.bottom, -CGFloat.spacing.multiply(by: 2))
-                        GroupSlider(model: self.model, groupViewWidth: self.groupViewWidth(width: parentView.size.width))
-                        Divider()
-                            .padding(Edge.Set(arrayLiteral: .leading, .trailing, .bottom, .top))
-                        Text("Subjects")
-                            .modifier(HeaderViewModifier())
-                        ForEach(self.model.subjects, id: \.self) { (subject) in
-                            SubjectView(subject: subject, width: parentView.size.width - CGFloat.spacing.multiply(by: 2))
+                    ScrollView(showsIndicators: false) {
+                        VStack{
+                            Divider()
+                                .padding(Edge.Set(arrayLiteral: .leading, .trailing, .bottom, .top))
+                            Text("Groups")
+                                .modifier(HeaderViewModifier())
+                                .padding(.bottom, -CGFloat.spacing.multiply(by: 2))
+                            GroupSlider(model: self.model, groupViewWidth: self.groupViewWidth(width: parentView.size.width))
+                            Divider()
+                                .padding(Edge.Set(arrayLiteral: .leading, .trailing, .bottom, .top))
+                            Text("Subjects")
+                                .modifier(HeaderViewModifier())
+                            ForEach(self.subjects, id: \.self) { (subject) in
+                                NavigationLink(destination:SubjectCatalogueView(subjectModel: SubjectModel(subject: subject))) {
+                                    SubjectView(subject: subject, width: parentView.size.width - CGFloat.spacing.multiply(by: 2))
+                                }
+                            }
                         }
                     }
-                }
-                .navigationBarTitle("Catalogue")
-                .navigationViewStyle(StackNavigationViewStyle())
-                .navigationBarItems(trailing:
-                    Button(action: {
-                        self.searchButtonPressed()
-                    }) {
-                        Image(systemName: "magnifyingglass")
-                    }
-                    .accentColor(UIColor.systemYellow.color)
-                    .font(.appSubheading)
-                )
+                    .onAppear(perform: self.loadData)
+                    .navigationBarTitle("Catalogue")
+                    .navigationViewStyle(StackNavigationViewStyle())
+                    .navigationBarItems(trailing:
+                        Button(action: {
+                            self.searchButtonPressed()
+                        }) {
+                            Image(systemName: "magnifyingglass")
+                        }
+                        .accentColor(UIColor.systemBlue.color)
+                        .font(.appSubheading)
+                    )
 
             }
         }
@@ -63,6 +67,12 @@ struct CatalogueView: View {
     
     func searchButtonPressed() {
         
+    }
+    
+    func loadData() {
+        model.loadSubjects { subjects in
+            self.subjects = subjects
+        }
     }
 }
 

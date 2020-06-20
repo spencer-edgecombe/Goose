@@ -26,4 +26,8 @@ struct Course: Codable, Hashable {
         case description
         case academicLevel = "academic_level"
     }
+    
+    var shorthand: String {
+        return "\(subject) \(catalogueNumber)"
+    }
 }

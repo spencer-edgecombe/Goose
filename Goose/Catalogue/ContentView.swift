@@ -11,10 +11,7 @@ import SwiftUI
 struct ContentView: View {
     let model: CatalogueModel = {
        let model = CatalogueModel()
-        model.loadGroups {
-        }
-        model.loadSubjects {
-        }
+     
         return model
     }()
     var body: some View {
@@ -27,7 +24,7 @@ struct ContentView: View {
                     }
             }
         }
-        .accentColor(UIColor.systemYellow.color)
+        .accentColor(UIColor.systemBlue.color)
         .font(.appSubheading)
     }
 }
