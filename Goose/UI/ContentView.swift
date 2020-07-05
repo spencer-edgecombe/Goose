@@ -9,19 +9,19 @@
 import SwiftUI
 
 struct ContentView: View {
-    let model: CatalogueModel = {
-       let model = CatalogueModel()
+    let model: CatalogModel = {
+       let model = CatalogModel()
      
         return model
     }()
     var body: some View {
         TabView {
-                CatalogueView(model: model)
+                CatalogView()
             .tabItem {
-                    VStack {
-                        Image(systemName: "studentdesk")
-                        Text("Catalogue")
-                    }
+                VStack {
+                    Image(systemName: "studentdesk")
+                    Text("Catalog")
+                }
             }
         }
         .accentColor(UIColor.systemBlue.color)

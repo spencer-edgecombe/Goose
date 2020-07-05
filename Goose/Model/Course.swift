@@ -11,7 +11,7 @@ import Foundation
 struct Course: Codable, Hashable {
     let courseId: String
     let subject: String
-    let catalogueNumber: String
+    let catalogNumber: String
     let title: String
     let units: Float
     let description: String
@@ -20,7 +20,7 @@ struct Course: Codable, Hashable {
     enum CodingKeys: String, CodingKey {
         case courseId = "course_id"
         case subject
-        case catalogueNumber = "catalog_number"
+        case catalogNumber = "catalog_number"
         case title
         case units
         case description
@@ -28,6 +28,6 @@ struct Course: Codable, Hashable {
     }
     
     var shorthand: String {
-        return "\(subject) \(catalogueNumber)"
+        return "\(subject) \(catalogNumber)"
     }
 }

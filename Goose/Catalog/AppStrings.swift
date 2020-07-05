@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 
 class AppStrings {
-    static let catalogueTabTitle = NSLocalizedString("catalogue_tab_title", comment: "")
-    static let catalogueTabSymbol = NSLocalizedString("catalogue_tab_symbol", comment: "")
+    static let catalogTabTitle = NSLocalizedString("catalog_tab_title", comment: "")
+    static let catalogTabSymbol = NSLocalizedString("catalog_tab_symbol", comment: "")
     
     static let myClassesTabTitle = NSLocalizedString("my_classes_tab_title", comment: "")
     static let myClassesTabSymbol = NSLocalizedString("my_classes_tab_symbol", comment: "")

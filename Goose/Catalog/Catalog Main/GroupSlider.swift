@@ -10,7 +10,7 @@ import SwiftUI
 
 struct GroupSlider: View {
     
-    var model: CatalogueModel
+    var model: CatalogModel
     
     var groupViewWidth: CGFloat
     
@@ -29,7 +29,7 @@ struct GroupSlider: View {
                         group in
                         HStack{
                             Spacer(minLength: CGFloat.spacing)
-                            NavigationLink(destination: GroupCatalogueView(group: group, subjects: self.model.filter(group: group))) {
+                            NavigationLink(destination: GroupCatalogView(group: group, subjects: self.model.filter(group: group))) {
                                 GroupView(group: group, groupViewWidth: self.groupViewWidth)
                             }
                         }
@@ -50,8 +50,8 @@ struct GroupSlider: View {
 }
 
 struct GroupSlider_Previews: PreviewProvider {
-    static var model: CatalogueModel {
-        let model = CatalogueModel()
+    static var model: CatalogModel {
+        let model = CatalogModel()
         model.mockLoadGroups()
         return model
     }

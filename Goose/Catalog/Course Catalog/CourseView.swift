@@ -32,14 +32,13 @@ struct CourseView: View {
                     HStack {
                             Text(course.shorthand)
                                 .font(.appSubheading)
-                                .frame(maxWidth: width(parentViewWidth: parentViewWidth).divide(by: 3), alignment: .leading)
                                 .padding(.leading, CGFloat.spacing.multiply(by: 2))
                                 .foregroundColor(groupColor)
+                            Spacer()
                             Text(course.title)
                                 .font(.appLabel)
                                 .fixedSize(horizontal: false, vertical: true)
                                 .multilineTextAlignment(.trailing)
-                                .frame(maxWidth: width(parentViewWidth: parentViewWidth).multiply(by: 2/3), alignment: .trailing)
                                 .padding(.trailing, CGFloat.spacing.multiply(by: 2))
                                 .foregroundColor(.primary)
 
@@ -53,6 +52,6 @@ struct CourseView: View {
 
 struct CourseView_Previews: PreviewProvider {
     static var previews: some View {
-        CourseView(parentViewWidth: 375, course: Course(courseId: "#79980", subject: "CS", catalogueNumber: "246", title: "Object Oriented Software Development", units: 0.5, description: "Introduction to object-oriented programming and to tools and techniques for software development. Designing, coding, debugging, testing, and documenting medium-sized programs: reading specifications and designing software to implement them; selecting appropriate data structures and control structures; writing reusable code; reusing existing code; basic performance issues; debuggers; test suites.", academicLevel: "Undergraduate"), groupColor: UIColor.systemPink.color)
+        CourseView(parentViewWidth: 375, course: Course(courseId: "#79980", subject: "CS", catalogNumber: "246", title: "Object Oriented Software Development", units: 0.5, description: "Introduction to object-oriented programming and to tools and techniques for software development. Designing, coding, debugging, testing, and documenting medium-sized programs: reading specifications and designing software to implement them; selecting appropriate data structures and control structures; writing reusable code; reusing existing code; basic performance issues; debuggers; test suites.", academicLevel: "Undergraduate"), groupColor: UIColor.systemPink.color)
     }
 }

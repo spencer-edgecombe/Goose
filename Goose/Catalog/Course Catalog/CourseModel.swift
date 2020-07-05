@@ -18,7 +18,7 @@ class CourseModel {
     }
     
     func loadCourses(completionHandler: @escaping (CourseDetails?) -> ()) {
-        Client.shared.courseDetails(for: course.subject, courseNumber: course.catalogueNumber) { [weak self] (courseDetails, error) in
+        Client.shared.courseDetails(for: course.subject, courseNumber: course.catalogNumber) { [weak self] (courseDetails, error) in
             if let weakSelf = self {
                 if let error = error {
                     print(error)

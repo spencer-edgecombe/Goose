@@ -1,5 +1,5 @@
 //
-//  CatalogueModel.swift
+//  CatalogModel.swift
 //  UWCourses
 //
 //  Created by Spencer Edgecombe on 2020-03-26.
@@ -9,7 +9,7 @@
 import Foundation
 
 
-class CatalogueModel {
+class CatalogModel {
     var subjects: [Subject]
     var groups: [Group]
 

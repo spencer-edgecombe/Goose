@@ -1,5 +1,5 @@
 //
-//  SubjectCatalogueView.swift
+//  SubjectCatalogView.swift
 //  Goose
 //
 //  Created by Spencer Edgecombe on 2020-05-19.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct SubjectCatalogueView: View {
+struct SubjectCatalogView: View {
     
     var subjectModel: SubjectModel
     
@@ -19,18 +19,21 @@ struct SubjectCatalogueView: View {
     var body: some View {
         GeometryReader { parentView in
             ScrollView(showsIndicators: false) {
-                Divider()
-                    .padding()
-                Text(self.subjectModel.subjectDescription())
-                    .modifier(HeaderViewModifier())
-                    .foregroundColor(.secondary)
+                VStack(alignment: .leading) {
+                    Text(self.subjectModel.subjectDescription())
+                            .padding([.leading, .trailing])
+                            .foregroundColor(.secondary)
+                            .font(.appSubheading)
+                    Divider()
+                        .padding([.leading, .trailing])
                     ForEach(self.courses, id: \.self) { course in
                         CourseView(parentViewWidth: parentView.size.width, course: course, groupColor: Goose.groupColor(group: self.subjectModel.subject.group).color
                         ).onTapGesture {
                             self.courseTapped(course: course)
                         }.sheet(isPresented: self.$showCourseModal) {
-                            CourseCatalogueView(courseModel: CourseModel(course: course))
+                            CourseCatalogView(courseModel: CourseModel(course: course))
                         }
+                    }
                 }
             }
             .onAppear(perform: self.loadData)
@@ -51,13 +54,13 @@ struct SubjectCatalogueView: View {
     
 }
 
-struct SubjectCatalogueView_Previews: PreviewProvider {
+struct SubjectCatalogView_Previews: PreviewProvider {
     static var model: SubjectModel {
         let model = SubjectModel(subject: Subject(name: "CS", description: "Computer Science", group: GroupCode.MAT))
         model.mockLoadCourses()
         return model
     }
     static var previews: some View {
-        SubjectCatalogueView(subjectModel: model)
+        SubjectCatalogView(subjectModel: model)
     }
 }
