@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CatalogView: View {
     
-    @ObservedObject var viewModel: ViewModel = CatalogViewModel()
+    @ObservedObject var viewModel: ViewModel = ViewModel()
 
     func groupViewWidth(width: CGFloat) -> CGFloat {
         return width.advanced(by: -CGFloat.spacing.multiply(by: 2)).divide(by: CGFloat.phi)

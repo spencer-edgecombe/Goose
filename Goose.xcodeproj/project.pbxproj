@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1B25097C50ACAA52324070B5 /* Pods_GooseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B99FC540492C0F8D6FCE853B /* Pods_GooseUITests.framework */; };
+		63D88B7D24CA62BB009D54E7 /* CourseCatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D88B7C24CA62BB009D54E7 /* CourseCatalogViewModel.swift */; };
 		874D467AF0670EE7DA7F6238 /* Pods_GooseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B054706CC9BCD1E8028683 /* Pods_GooseTests.framework */; };
 		8E0461FF2A4F8F5812B0368B /* Pods_Goose.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40D58CE18E95BDCC0364520E /* Pods_Goose.framework */; };
 		BC0111822499679400AACD0E /* Leaf.svg in Resources */ = {isa = PBXBuildFile; fileRef = BC0111812499679400AACD0E /* Leaf.svg */; };
@@ -73,6 +74,7 @@
 
 /* Begin PBXFileReference section */
 		40D58CE18E95BDCC0364520E /* Pods_Goose.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Goose.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63D88B7C24CA62BB009D54E7 /* CourseCatalogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCatalogViewModel.swift; sourceTree = "<group>"; };
 		75A756E11445F700EEEB12F9 /* Pods-GooseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GooseUITests.debug.xcconfig"; path = "Target Support Files/Pods-GooseUITests/Pods-GooseUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8F149C575B38166722FCEA16 /* Pods-Goose.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Goose.release.xcconfig"; path = "Target Support Files/Pods-Goose/Pods-Goose.release.xcconfig"; sourceTree = "<group>"; };
 		9F80C55489F1FB7FFD73D73A /* Pods-GooseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GooseTests.debug.xcconfig"; path = "Target Support Files/Pods-GooseTests/Pods-GooseTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				BC5F3411248B26D1008BE12B /* CourseModel.swift */,
+				63D88B7C24CA62BB009D54E7 /* CourseCatalogViewModel.swift */,
 				BC5F3413248B2B66008BE12B /* CourseCatalogView.swift */,
 				BCB33B362474D6210059DEB7 /* CourseView.swift */,
 			);
@@ -615,6 +618,7 @@
 				BC2DCE68246DF40C00395390 /* AppFonts.swift in Sources */,
 				BC2DCE60246DF40C00395390 /* Subject.swift in Sources */,
 				BC2DCE61246DF40C00395390 /* Group.swift in Sources */,
+				63D88B7D24CA62BB009D54E7 /* CourseCatalogViewModel.swift in Sources */,
 				BCB33B332474BDE60059DEB7 /* SubjectView.swift in Sources */,
 				BC2DCE66246DF40C00395390 /* SubjectModel.swift in Sources */,
 				BC5F3414248B2B66008BE12B /* CourseCatalogView.swift in Sources */,

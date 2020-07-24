@@ -31,7 +31,7 @@ struct SubjectCatalogView: View {
                         ).onTapGesture {
                             self.courseTapped(course: course)
                         }.sheet(isPresented: self.$showCourseModal) {
-                            CourseCatalogView(courseModel: CourseModel(course: course))
+                            CourseCatalogView(course: course)
                         }
                     }
                 }
