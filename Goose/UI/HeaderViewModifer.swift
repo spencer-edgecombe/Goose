@@ -13,7 +13,7 @@ struct HeaderViewModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
         .frame(maxWidth: .infinity, alignment: .leading)
-        .font(.appHeading)
+        .font(.appSubheading)
         .foregroundColor(.primary)
         .padding(.leading)
     }

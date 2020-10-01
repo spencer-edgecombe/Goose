@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17183" systemVersion="20A5354i" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CourseData" representedClassName="CourseData" syncable="YES" codeGenerationType="class">
+        <attribute name="academicLevel" optional="YES" attributeType="String"/>
+        <attribute name="catalogNumber" optional="YES" attributeType="String"/>
+        <attribute name="courseDescription" optional="YES" attributeType="String"/>
+        <attribute name="courseId" optional="YES" attributeType="String"/>
+        <attribute name="subject" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="units" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+    </entity>
+    <elements>
+        <element name="CourseData" positionX="-63" positionY="-18" width="128" height="134"/>
+    </elements>
+</model>

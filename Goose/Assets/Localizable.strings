@@ -1,12 +1,4 @@
 
-// Catalog Tab
-"catalog_tab_symbol" = "doc.text.magnifyingglass";
-"catalog_tab_title" = "Catalog";
-
-// My Classes Tab
-"my_classes_tab_symbol" = "􀑔";
-"my_classes_tab_title" = "My Classes";
-
-// Schedule Tab
-"schedule_tab_symbol" = "􀑔";
-"schedule_tab_title" = "Schedule";
+"catalog_title" = "Catalog";
+"catalog_main_faculties_header" = "Faculties";
+"catalog_main_subjects_header" = "Subjects";
