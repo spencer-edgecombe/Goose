@@ -43,13 +43,12 @@ struct PaddedDivider: View {
 }
 
 struct ExpandButton: View {
-    
     @Binding var isExpanded: Bool
     var body: some View {
         HStack {
             Spacer()
             Button(isExpanded ? "See Less" : "See More") {
-                isExpanded.toggle()
+                self.isExpanded = !self.isExpanded
             }
             .padding(.trailing)
             .labelFont(isBold: false, color: .blue)
@@ -74,8 +73,7 @@ struct LoadingPlaceholder: View {
     var body: some View {
         HStack(alignment: .center) {
             Spacer()
-            ProgressView("Loading")
-                .progressViewStyle(CircularProgressViewStyle(tint: .primary))
+            Text("Loading")
                 .labelFont(isBold: true, color: .primary)
                 .padding()
             Spacer()

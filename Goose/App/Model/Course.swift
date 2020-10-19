@@ -26,8 +26,13 @@ class Course: Resource {
     let units: Float
     let description: String
     let academicLevel: String
+    var facultyCode: FacultyCode = .NONE
     
-    init(courseId: String, subject: String, catalogNumber: String, title: String, units: Float, description: String, academicLevel: String) {
+    var facultyColor: Color {
+        return Faculty.color(faculty: facultyCode)
+    }
+    
+    init(courseId: String, subject: String, catalogNumber: String, title: String, units: Float, description: String, academicLevel: String, facultyCode: FacultyCode = .NONE) {
         self.courseId = courseId
         self.subject = subject
         self.catalogNumber = catalogNumber
@@ -35,6 +40,7 @@ class Course: Resource {
         self.units = units
         self.description = description
         self.academicLevel = academicLevel
+        self.facultyCode = facultyCode
     }
     
     enum CodingKeys: String, CodingKey {

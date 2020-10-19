@@ -11,12 +11,17 @@ import SwiftUI
 
 class CourseDetailViewModel: DetailViewModel<CourseDetails> {
     var course: Course
-    var facultyColor: Color
-    @Published private(set) var isSaved: Bool
+    var facultyColor: Color {
+        return course.facultyColor
+    }
+    @Published private(set) var isSaved: Bool {
+        didSet {
+            self.objectWillChange.send()
+        }
+    }
     
-    init(course: Course, facultyColor: Color, _ isMock: Bool = false) {
+    init(course: Course, _ isMock: Bool = false) {
         self.course = course
-        self.facultyColor = facultyColor
         if isMock {
             self.isSaved = false
         } else {

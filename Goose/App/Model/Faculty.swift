@@ -10,7 +10,7 @@ import Foundation
 import SwiftUI
 
 enum FacultyCode: String, Codable, Hashable {
-    case AHS, ART, CGC, ENG, ENV, GRAD, IS, MAT, REN, SCI, STJ, STP, THL, VPA
+    case AHS, ART, CGC, ENG, ENV, GRAD, IS, MAT, REN, SCI, STJ, STP, THL, VPA, NONE
 }
 
 struct Faculty: Resource {

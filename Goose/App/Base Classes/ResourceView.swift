@@ -14,7 +14,7 @@ struct ResourceView<R: Resource, Content>: View where Content: View {
     var failurePlaceholderMessage: String
     var successView: () -> Content
     
-    init(viewModel: ViewModel<R>, failurePlaceholderMessage: String, failureAlertMessage: String, @ViewBuilder successView:  @escaping () -> Content) {
+    init(viewModel: ViewModel<R>, failurePlaceholderMessage: String, @ViewBuilder successView:  @escaping () -> Content) {
         self.viewModel = viewModel
         self.failurePlaceholderMessage = failurePlaceholderMessage
         self.successView = successView
@@ -36,5 +36,11 @@ struct ResourceView<R: Resource, Content>: View where Content: View {
                 LoadingPlaceholder()
             }
         }
+    }
+}
+
+struct ResourceView_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
     }
 }

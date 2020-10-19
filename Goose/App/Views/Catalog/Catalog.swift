@@ -12,7 +12,7 @@ struct Catalog: View {
     var isMock: Bool
     var body: some View {
         NavigationView {
-            CatalogHome(isMock)
+            FacultyListView()
         }
     }
     

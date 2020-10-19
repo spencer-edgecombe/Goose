@@ -21,10 +21,9 @@ struct TitledView<Content>: View where Content: View {
                     .headingFont(color: titleColor)
                     .padding(.top, -.halfSpacing)
                     .padding(.leading)
-                Divider()
-                    .horizontalPadding()
                 content()
             }
+            .bottomPadding()
         }
     }
 }

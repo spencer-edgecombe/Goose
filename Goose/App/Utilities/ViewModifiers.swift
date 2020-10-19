@@ -13,35 +13,35 @@ extension View {
     func shadow() -> some View {
         self.modifier(ShadowModifier())
     }
-    
-    func headingFont(isBold: Bool = true, color: Color = .primary) -> some View {
-        self.modifier(HeadingModifier(isBold: isBold, color: color))
-    }
-    
-    func subheadingFont(isBold: Bool = true, color: Color = .primary) -> some View {
-        self.modifier(SubheadingModifier(isBold: isBold, color: color))
-    }
-    
-    func labelFont(isBold: Bool = true, color: Color = .primary) -> some View {
-        self.modifier(LabelModifier(isBold: isBold, color: color))
-    }
-    
-    func bodyFont(isBold: Bool = true, color: Color = .primary) -> some View {
-        self.modifier(BodyModifier(isBold: isBold, color: color))
-    }
-    
-    func smallFont(isBold: Bool = true, color: Color = .primary) -> some View {
-        self.modifier(SmallModifier(isBold: isBold, color: color))
-    }
-       
-    func largeFont(isBold: Bool = true, color: Color = .primary) -> some View {
-        self.modifier(LargeModifier(isBold: isBold, color: color))
-    }
-    
-    func extraLargeFont(isBold: Bool = true, color: Color = .primary) -> some View {
-        self.modifier(ExtraLargeModifier(isBold: isBold, color: color))
-    }
-    
+//    
+//    func headingFont(isBold: Bool = true, color: Color = .primary) -> some View {
+//        self.modifier(HeadingModifier(isBold: isBold, color: color))
+//    }
+//    
+//    func subheadingFont(isBold: Bool = true, color: Color = .primary) -> some View {
+//        self.modifier(SubheadingModifier(isBold: isBold, color: color))
+//    }
+//    
+//    func labelFont(isBold: Bool = true, color: Color = .primary) -> some View {
+//        self.modifier(LabelModifier(isBold: isBold, color: color))
+//    }
+//    
+//    func bodyFont(isBold: Bool = true, color: Color = .primary) -> some View {
+//        self.modifier(BodyModifier(isBold: isBold, color: color))
+//    }
+//    
+//    func smallFont(isBold: Bool = true, color: Color = .primary) -> some View {
+//        self.modifier(SmallModifier(isBold: isBold, color: color))
+//    }
+//       
+//    func largeFont(isBold: Bool = true, color: Color = .primary) -> some View {
+//        self.modifier(LargeModifier(isBold: isBold, color: color))
+//    }
+//    
+//    func extraLargeFont(isBold: Bool = true, color: Color = .primary) -> some View {
+//        self.modifier(ExtraLargeModifier(isBold: isBold, color: color))
+//    }
+//    
     func navigationBarTintColor(_ backgroundColor: Color) -> some View {
         self.modifier(NavigationBarBackgroundModifier(backgroundColor: backgroundColor))
     }

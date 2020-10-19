@@ -12,15 +12,23 @@ struct CourseListView: View {
     @ObservedObject var viewModel: CourseListViewModel
     var body: some View {
         TitledView(title: viewModel.subject.description, titleColor: viewModel.facultyColor) {
-            ResourceView(viewModel: viewModel, failurePlaceholderMessage: "Couldn't Fetch Courses", failureAlertMessage: "Something went wrong...") {
-                ForEach(self.viewModel.resources, id: \.self) { course in
-                    NavigationLink(destination:CourseDetailView(course: course, facultyColor: viewModel.facultyColor)) {
-                        CourseView(course: course, color: viewModel.facultyColor)
-                            .verticalPadding(.halfSpacing)
+            ResourceView(viewModel: viewModel, failurePlaceholderMessage: "Couldn't Fetch Courses") {
+                if viewModel.resources.isEmpty {
+                    NoContentPlaceholder(message: "No courses")
+                } else {
+                    ForEach(self.viewModel.resources, id: \.self) { course in
+                        NavigationLink(destination:CourseDetailView(course: course)) {
+                            CourseView(course: course)
+                        }
                     }
                 }
             }
-        }.navigationTitle(viewModel.subject.name)
+        }
+        .navigationTitle(viewModel.subject.name)
+        .background(
+            UIColor.systemGroupedBackground.color
+                .edgesIgnoringSafeArea(.all)
+        )
     }
     
     init(subject: Subject, _ isMock: Bool = false) {

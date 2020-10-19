@@ -5,11 +5,12 @@
         <attribute name="catalogNumber" optional="YES" attributeType="String"/>
         <attribute name="courseDescription" optional="YES" attributeType="String"/>
         <attribute name="courseId" optional="YES" attributeType="String"/>
+        <attribute name="facultyCode" optional="YES" attributeType="String"/>
         <attribute name="subject" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
         <attribute name="units" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
     </entity>
     <elements>
-        <element name="CourseData" positionX="-63" positionY="-18" width="128" height="134"/>
+        <element name="CourseData" positionX="-63" positionY="-18" width="128" height="149"/>
     </elements>
 </model>

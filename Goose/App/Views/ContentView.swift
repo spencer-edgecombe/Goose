@@ -21,8 +21,8 @@ struct ContentView: View {
             CoursePlanView()
                 .tabItem {
                     VStack {
-                        Image(systemName: "rectangle.on.rectangle")
-                        Text("Course Plan")
+                        Image(systemName: "heart")
+                        Text("Saved")
                     }
                 }
                 

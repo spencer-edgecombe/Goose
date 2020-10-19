@@ -11,21 +11,13 @@ import SwiftUI
 struct CourseView: View {
     
     var course: Course
-    var color: Color
     
     var body: some View {
-        
+        CardView(title: course.title, titleColor: course.facultyColor, isLink: true) {
             VStack(alignment: .leading) {
-                HStack {
-                    Text(course.title)
-                    Spacer()
-                    Image(systemName: "chevron.right")
-                }
-                .smallFont(isBold: true, color: color)
                 Text(course.shorthand)
                     .headingFont()
                     .multilineTextAlignment(.leading)
-                    .padding([.top], .halfSpacing)
                 Text(course.description)
                     .bodyFont(isBold: false)
                     .lineLimit(3)
@@ -44,11 +36,8 @@ struct CourseView: View {
                         .labelFont(isBold: false)
                 }
             }
-            .padding()
-            .background(UIColor.secondarySystemGroupedBackground.color)
-            .cornerRadius(12)
-            .padding([.leading, .trailing])
-            .shadow()
+        }
+            
     }
     
 }

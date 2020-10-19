@@ -11,11 +11,24 @@ import SwiftUI
 
 class CourseListViewModel: ListViewModel<Course> {
     var subject: Subject
-    let facultyColor: Color
+    var facultyColor: Color {
+        return Faculty.color(faculty: subject.faculty)
+    }
     init(subject: Subject, _ isMock: Bool = false) {
         self.subject = subject
-        self.facultyColor = Faculty.color(faculty: subject.faculty)
         let url = Client.shared.coursesURL(subject: &self.subject)
         super.init(url, isMock)
+    }
+    override func resourcesDidLoadSuccessfully(resources: [Course]) {
+        super.resourcesDidLoadSuccessfully(resources: resources)
+        resources.forEach { (course) in
+            course.facultyCode = subject.faculty
+        }
+    }
+}
+
+struct CourseListViewModel_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
     }
 }

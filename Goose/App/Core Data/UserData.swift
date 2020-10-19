@@ -9,8 +9,9 @@
 import Foundation
 import UIKit
 import CoreData
+import SwiftUI
 
-class UserData: ObservableObject {
+class UserData {
     
     static var shared: UserData = {
       return UserData()
@@ -19,7 +20,9 @@ class UserData: ObservableObject {
     private var coursesData: [NSManagedObject] = []
     private var courses: [String:Bool] = [:]
     
-    @Published var savedCourses: [Course] = []
+    var coursePlanViewModel: CoursePlanViewModel?
+    
+    var savedCourses: [Course] = []
     
     init() {
         load()
@@ -46,13 +49,14 @@ class UserData: ObservableObject {
         let courseData = NSManagedObject(entity: entity,
                                      insertInto: managedContext)
         
-        courseData.setValuesForKeys(["courseId" : course.courseId,
-                                 "academicLevel" : course.academicLevel,
-                                 "units" : course.units,
-                                 "catalogNumber" : course.catalogNumber,
-                                 "courseDescription" : course.description,
-                                 "subject" : course.subject,
-                                 "title" : course.title
+        courseData.setValuesForKeys(["courseId": course.courseId,
+                                 "academicLevel": course.academicLevel,
+                                 "units": course.units,
+                                 "catalogNumber": course.catalogNumber,
+                                 "courseDescription": course.description,
+                                 "subject": course.subject,
+                                 "title": course.title,
+                                 "facultyCode": course.facultyCode.rawValue
                                 ])
         
         do {
@@ -66,7 +70,10 @@ class UserData: ObservableObject {
             } else {
                 savedCourses.append(course)
             }
-            objectWillChange.send()
+            guard let coursePlanViewModel = coursePlanViewModel else {
+                return true
+            }
+            coursePlanViewModel.savedCourses = savedCourses
             return true
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
@@ -130,6 +137,7 @@ class UserData: ObservableObject {
                    let description: String = object.value(forKey: "courseDescription") as? String,
                    let units: Float = object.value(forKey: "units") as? Float,
                    let courseId: String = object.value(forKey: "courseId") as? String,
+                   let facultyCode: String = object.value(forKey: "facultyCode") as? String,
                    let catalogNumber: String = object.value(forKey: "catalogNumber") as? String else {
                     return
                 }
@@ -139,7 +147,8 @@ class UserData: ObservableObject {
                               catalogNumber: catalogNumber,
                               title: title, units: units,
                               description: description,
-                              academicLevel: academicLevel))
+                              academicLevel: academicLevel,
+                              facultyCode: FacultyCode.init(rawValue: facultyCode) ?? .NONE))
             }
             savedCourses.sort {
                 return $0.shorthand < $1.shorthand
