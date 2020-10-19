@@ -14,20 +14,20 @@ struct ContentView: View {
             Catalog()
                 .tabItem {
                     VStack {
-                        Image(systemName: "studentdesk")
+                        Image(systemName: "newspaper.fill")
                         Text("Catalog")
                     }
                 }
             CoursePlanView()
                 .tabItem {
                     VStack {
-                        Image(systemName: "heart")
+                        Image(systemName: "heart.fill")
                         Text("Saved")
                     }
                 }
                 
         }
-        .accentColor(UIColor.systemBlue.color)
+        .accentColor(.yellow)
         .font(.appSubheading)
     }
 }
