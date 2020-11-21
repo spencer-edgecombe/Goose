@@ -7,40 +7,34 @@
 //
 
 import SwiftUI
+import Foundation
 
-struct ResourceView<R: Resource, Content>: View where Content: View {
+struct ResourceView<T: Resource, Content>: View where Content: View {
     
-    @ObservedObject var viewModel: ViewModel<R>
+    @ObservedObject var viewModel: ViewModel<T>
     var failurePlaceholderMessage: String
     var successView: () -> Content
-    
-    init(viewModel: ViewModel<R>, failurePlaceholderMessage: String, @ViewBuilder successView:  @escaping () -> Content) {
+
+    init(viewModel: ViewModel<T>, failurePlaceholderMessage: String, @ViewBuilder successView:  @escaping () -> Content) {
         self.viewModel = viewModel
         self.failurePlaceholderMessage = failurePlaceholderMessage
         self.successView = successView
     }
-    
     var body: some View {
         Group {
             if case LoadingState.success = viewModel.loadingState {
                 successView()
             } else if case LoadingState.failure = viewModel.loadingState {
                 NoContentPlaceholder(message: failurePlaceholderMessage)
-                    .alert(isPresented: viewModel.$isAlertPresented, content: {
-                        Alert(title: Text("Oops")
-                              , message: Text("Something went wrong")
-                              , dismissButton: .default(Text("Okay")))
-                    })
+                    .alert(isPresented: viewModel.$isAlertPresented) {
+                        Alert(title: Text(R.string.localizable.titleAlert())
+                              , message: Text(R.string.localizable.messageAlert())
+                              , dismissButton: .default(Text(R.string.localizable.buttonLabelConfirm())))
+                    }
                 RefreshButton(viewModel: viewModel)
             } else {
                 LoadingPlaceholder()
             }
         }
-    }
-}
-
-struct ResourceView_Previews: PreviewProvider {
-    static var previews: some View {
-        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
     }
 }

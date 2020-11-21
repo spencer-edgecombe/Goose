@@ -29,7 +29,6 @@ struct CardView<Content>: View where Content: View {
         .padding()
         .background(UIColor.secondarySystemGroupedBackground.color)
         .cornerRadius(12)
-        .padding([.leading, .trailing])
     }
 }
 

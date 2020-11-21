@@ -14,6 +14,7 @@ struct Catalog: View {
         NavigationView {
             FacultyListView()
         }
+        .navigationViewStyle(DoubleColumnNavigationViewStyle())
     }
     
     init(_ isMock: Bool = false) {

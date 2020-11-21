@@ -15,14 +15,15 @@ struct CoursePlanView: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                VStack(alignment: .leading) {
+                LazyVStack(alignment: .leading) {
                     if viewModel.savedCourses.isEmpty {
-                        NoContentPlaceholder(message: "No courses saved")
+                        NoContentPlaceholder(message: R.string.localizable.placeholderEmptyListSaved())
                     } else {
                         ForEach(viewModel.savedCourses, id: \.self) {
                             course in
                             NavigationLink(destination: CourseDetailView(course: course)) {
                                 CourseView(course: course)
+                                    .horizontalPadding()
                             }
                         }
                     }
@@ -30,10 +31,10 @@ struct CoursePlanView: View {
                 .bottomPadding()
             }
             .background(
-                UIColor.systemGroupedBackground.color
+                Color.background
                     .edgesIgnoringSafeArea(.all)
             )
-            .navigationTitle("Saved Courses")
+            .navigationTitle(R.string.localizable.titleCourseplanner())
             .navigationViewStyle(DoubleColumnNavigationViewStyle())
         }
     }

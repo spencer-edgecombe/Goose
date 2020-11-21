@@ -16,26 +16,34 @@ struct SubjectListView: View {
     }
     var body: some View {
         VStack(alignment: .leading, spacing: .spacing) {
-            ResourceView(viewModel: viewModel, failurePlaceholderMessage: "Couldn't Load Subjects") {
+            ResourceView(viewModel: viewModel, failurePlaceholderMessage: R.string.localizable.placeholderErrorListSubject()) {
                 if viewModel.resources.isEmpty {
-                    NoContentPlaceholder(message: "No subjects")
+                    NoContentPlaceholder(message: R.string.localizable.placeholderEmptyListSubject())
                 } else {
-                    List(viewModel.resources, id: \.self) { subject in
-                        NavigationLink(destination: CourseListView(subject: subject)) {
-                            SubjectRow(subject: subject)
+                    List {
+                        Section(header:
+                                    ListSectionHeader(text: R.string.localizable.headerListSubject(), color: viewModel.faculty.color)
+                        ) {
+                            ForEach(viewModel.resources, id: \.self) { subject in
+                                    NavigationLink(destination: CourseListView(subject: subject)) {
+                                        SubjectRow(subject: subject)
+                                    }
+                                    .isDetailLink(false)
+                            }
                         }
-                        .isDetailLink(false)
                     }
                     .listStyle(InsetGroupedListStyle())
                 }
             }
         }
-        .navigationTitle("Choose a subject")
+        .navigationTitle(viewModel.faculty.name)
     }
 }
 
 struct SubjectList_Previews: PreviewProvider {
     static var previews: some View {
-        SubjectListView(faculty: Faculty(code: .MAT, name: "Math"), true)
+        NavigationView {
+            SubjectListView(faculty: Faculty(code: .MAT, name: "Math"), true)
+        }
     }
 }

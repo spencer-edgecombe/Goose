@@ -38,16 +38,25 @@ extension View {
         self.modifier(LargeModifier(isBold: isBold, color: color))
     }
     
-    func extraLargeFont(isBold: Bool = true, color: Color = .primary) -> some View {
-        self.modifier(ExtraLargeModifier(isBold: isBold, color: color))
+    func largeTitleFont(isBold: Bool = true, color: Color = .primary) -> some View {
+        self.modifier(LargeModifier(isBold: isBold, color: color))
     }
     
-    func navigationBarTintColor(_ backgroundColor: Color) -> some View {
-        self.modifier(NavigationBarBackgroundModifier(backgroundColor: backgroundColor))
+    func xLargeFont(isBold: Bool = true, color: Color = .primary) -> some View {
+        self.modifier(XLargeModifier(isBold: isBold, color: color))
     }
     
-    func navigationBarForegroundColor(_ foregroundColor: Color) -> some View {
-        self.modifier(NavigationBarForegroundModifier(foregroundColor: foregroundColor))
+    func xxLargeFont(isBold: Bool = true, color: Color = .primary) -> some View {
+        self.modifier(XXLargeModifier(isBold: isBold, color: color))
+    }
+    
+    func customFont(size: CGFloat, weight: Font.Weight = Font.boldWeight, color: Color = .primary) -> some View {
+        self.font(.system(size: size, weight: weight, design: .rounded))
+            .foregroundColor(color)
+    }
+    
+    func xxxLargeFont(isBold: Bool = true, color: Color = .primary) -> some View {
+        self.modifier(XXXLargeModifier(isBold: isBold, color: color))
     }
     
     func horizontalPadding(_ spacing: CGFloat = .spacing) -> some View {
@@ -154,13 +163,46 @@ struct LargeModifier: ViewModifier {
     }
 }
 
-struct ExtraLargeModifier: ViewModifier {
+struct LargeTitleModifier: ViewModifier {
+    
+    var isBold: Bool
+    var color: Color
+    
+    func body(content: Content) -> some View {
+        content.font(isBold ? Font.appLarge.weight(Font.boldWeight) : Font.appLargeTitle.weight(Font.regularWeight))
+            .foregroundColor(color)
+    }
+}
+
+struct XLargeModifier: ViewModifier {
     
     var isBold: Bool
     var color: Color
     
     func body(content: Content) -> some View {
         content.font(isBold ? Font.appXLarge.weight(Font.boldWeight) : Font.appXLarge.weight(Font.regularWeight))
+            .foregroundColor(color)
+    }
+}
+
+struct XXLargeModifier: ViewModifier {
+    
+    var isBold: Bool
+    var color: Color
+    
+    func body(content: Content) -> some View {
+        content.font(isBold ? Font.appXXLarge.weight(Font.boldWeight) : Font.appXXLarge.weight(Font.regularWeight))
+            .foregroundColor(color)
+    }
+}
+
+struct XXXLargeModifier: ViewModifier {
+    
+    var isBold: Bool
+    var color: Color
+    
+    func body(content: Content) -> some View {
+        content.font(isBold ? Font.appXXXLarge.weight(Font.boldWeight) : Font.appXXXLarge.weight(Font.regularWeight))
             .foregroundColor(color)
     }
 }
@@ -186,59 +228,3 @@ struct AppViews_Previews: PreviewProvider {
         /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
     }
 }
-
-
-struct NavigationBarBackgroundModifier: ViewModifier {
-        
-    var backgroundColor: Color
-    
-    init( backgroundColor: Color) {
-        self.backgroundColor = backgroundColor
-        let coloredAppearance = UINavigationBarAppearance()
-        coloredAppearance.configureWithTransparentBackground()
-        coloredAppearance.backgroundColor = .clear
-        coloredAppearance.titleTextAttributes[.font] = UIFont.appLabel
-        coloredAppearance.largeTitleTextAttributes[.font] = UIFont.appLargeTitle
-        
-        UINavigationBar.appearance().standardAppearance = coloredAppearance
-        UINavigationBar.appearance().compactAppearance = coloredAppearance
-        UINavigationBar.appearance().scrollEdgeAppearance = coloredAppearance
-        UINavigationBar.appearance().tintColor = .white
-
-    }
-    
-    func body(content: Content) -> some View {
-        ZStack{
-            content
-            VStack {
-                GeometryReader { geometry in
-                    backgroundColor
-                        .frame(height: geometry.safeAreaInsets.top)
-                        .edgesIgnoringSafeArea(.top)
-                    Spacer()
-                }
-            }
-        }
-    }
-}
-
-struct NavigationBarForegroundModifier: ViewModifier {
-        
-    var foregroundColor: Color
-    
-    init( foregroundColor: Color) {
-        self.foregroundColor = foregroundColor
-        let coloredAppearance = UINavigationBarAppearance()
-        coloredAppearance.titleTextAttributes[.foregroundColor] = UIColor(foregroundColor)
-        coloredAppearance.largeTitleTextAttributes[.foregroundColor] = UIColor(foregroundColor)
-        coloredAppearance.titleTextAttributes[.font] = UIFont.appLabel
-        coloredAppearance.largeTitleTextAttributes[.font] = UIFont.appLargeTitle
-        UINavigationBar.appearance().standardAppearance = coloredAppearance
-    }
-    
-    func body(content: Content) -> some View {
-        content
-    }
-}
-
-

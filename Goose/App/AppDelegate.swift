@@ -15,21 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.appBody], for: .normal)
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.appBody], for: .selected)
+        let tabBarItemAppearance = UITabBarItem.appearance()
         
-        UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.font: UIFont.appLargeTitle]
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.font: UIFont.appSubheading]
+        tabBarItemAppearance.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.appBody], for: .normal)
+        tabBarItemAppearance.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.appBody], for: .selected)
         
 
-        let tabBarAppearance: UITabBarAppearance = UITabBarAppearance()
+        let navigationBarAppearance = UINavigationBarAppearance()
         
-        tabBarAppearance.shadowImage = nil
-        tabBarAppearance.shadowColor = .clear
-        tabBarAppearance.backgroundColor = .appBarBackground
-        tabBarAppearance.backgroundEffect = UIBlurEffect(style: .regular)
-            
-        //UITabBar.appearance().standardAppearance = tabBarAppearance
+        navigationBarAppearance.largeTitleTextAttributes = [NSAttributedString.Key.font: UIFont.appLargeTitle, NSAttributedString.Key.foregroundColor: UIColor.label]
+        navigationBarAppearance.titleTextAttributes = [NSAttributedString.Key.font: UIFont.appLabel, NSAttributedString.Key.foregroundColor: UIColor.label]
+        
+        UINavigationBar.appearance().standardAppearance = navigationBarAppearance
         
         return true
     }

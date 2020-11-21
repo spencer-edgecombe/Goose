@@ -1,4 +1,53 @@
 
-"catalog_title" = "Catalog";
-"catalog_main_faculties_header" = "Faculties";
-"catalog_main_subjects_header" = "Subjects";
+"title.alert" = "Oops";
+"title.catalog" = "Catalog";
+"title.courseplanner" = "Saved Courses";
+"title.acknowledgements" = "Acknowledgements";
+"title.settings" = "Settings";
+"title.welcome" = "Welcome to Goose!";
+
+"header.list.faculty" = "Choose a faculty...";
+"header.list.subject" = "Choose a subject...";
+"header.list.acknowledgements.appIcon" = "App Icon";
+
+"header.detail.course.units" = "Units";
+"header.detail.course.description" = "Description";
+"header.detail.course.academiclevel" = "Academic Level";
+"header.detail.course.termsoffered" = "Terms Offered";
+"header.detail.course.offerings" = "Offerings";
+"header.detail.course.prerequisites" = "Prerequisites";
+"header.detail.course.corequisites" = "Corequisites";
+"header.detail.course.antirequisites" = "Antirequisites";
+"header.detail.course.instructions" = "Instructions";
+"header.detail.course.notes" = "Notes";
+"header.detail.acknowledgements.createdBy" = "Created by";
+"header.detail.acknowledgements.foundFrom" = "Found from";
+
+"header.popover.welcome.dataPolicy" = "Our Data Policy";
+
+
+"message.alert" = "Something went wrong";
+"message.acknowledgements.freepik" = "Freepik";
+"message.acknowledgements.flaticon" = "Flaticon";
+"message.welcome.appDescription" = "You can use this app to browse and save courses offered by the University of Waterloo!";
+"message.welcome.dataPolicy" = "Your personal data (saved courses, schedule, name, email, actions in the app, etc...) will never be viewed or shared by Goose. This is a free app that costs nothing to run so we don't need to have ads, use your data, charge for the app or do any shady, profit-making tactics.";
+
+"placeholder.loading" = "Loading";
+"placeholder.refresh" = "Refresh";
+
+"placeholder.error.list.faculty" = "Couldn't load faculties";
+"placeholder.error.list.subject" = "Couldn't load subjects";
+"placeholder.error.list.course" = "Couldn't load courses";
+
+"placeholder.error.detail.course" = "Couldn't load course";
+
+"placeholder.empty.list.faculty" = "No Faculties";
+"placeholder.empty.list.subject" = "No Subjects";
+"placeholder.empty.list.course" = "No Courses";
+"placeholder.empty.list.saved" = "No courses saved";
+
+"button.label.confirm" = "Okay";
+"button.expand.label.expanded" = "See Less";
+"button.expand.label" = "See More";
+
+

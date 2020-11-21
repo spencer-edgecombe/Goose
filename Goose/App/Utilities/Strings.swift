@@ -8,27 +8,12 @@
 
 import Foundation
 import UIKit
-
-class AppStrings {
-   
-}
+import SwiftUI
 
 extension String {
     
     static func localized(key: String, comment: String = "") -> String {
         return NSLocalizedString(key, comment: comment)
-    }
-    
-    static var catalogTitle: String {
-        return localized(key: "catalog_title")
-    }
-    
-    static var catalogMainFacultiesHeader: String {
-        return localized(key: "catalog_main_faculties_header")
-    }
-    
-    static var catalogMainSubjectsHeader: String {
-        return localized(key: "catalog_main_subjects_header")
     }
 
     func heightWithConstrainedWidth(width: CGFloat, font: UIFont) -> CGFloat {
@@ -42,4 +27,5 @@ extension String {
         let boundingBox = self.boundingRect(with: constraintRect, options: [.usesLineFragmentOrigin, .usesFontLeading], attributes: [NSAttributedString.Key.font: font], context: nil)
         return boundingBox.width
     }
+
 }

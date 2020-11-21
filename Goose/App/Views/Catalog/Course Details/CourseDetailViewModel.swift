@@ -44,10 +44,10 @@ class CourseDetailViewModel: DetailViewModel<CourseDetails> {
     var detailEntries: [DetailEntry] {
         var entries: [DetailEntry] = []
         if !course.description.isEmpty {
-            entries.append(DetailEntry("Description", course.description))
+            entries.append(DetailEntry(R.string.localizable.headerDetailCourseDescription(), course.description))
         }
-        entries.append(DetailEntry("Units", course.unitsText))
-        entries.append(DetailEntry("Academic Level", course.academicLevel))
+        entries.append(DetailEntry(R.string.localizable.headerDetailCourseUnits(), course.unitsText))
+        entries.append(DetailEntry(R.string.localizable.headerDetailCourseAcademiclevel(), course.academicLevel))
         if let termsOffered = resource.termsOffered {
             var terms: String = ""
             termsOffered.forEach { (term) in
@@ -58,7 +58,7 @@ class CourseDetailViewModel: DetailViewModel<CourseDetails> {
                 }
             }
             if !terms.isEmpty {
-                entries.append(DetailEntry("Terms Offered", terms))
+                entries.append(DetailEntry(R.string.localizable.headerDetailCourseTermsoffered(), terms))
             }
         }
         if let offerings = resource.offerings {
@@ -73,17 +73,17 @@ class CourseDetailViewModel: DetailViewModel<CourseDetails> {
                 }
             }
             if !offeringString.isEmpty {
-                entries.append(DetailEntry("Offerings", offeringString))
+                entries.append(DetailEntry(R.string.localizable.headerDetailCourseOfferings(), offeringString))
             }
         }
         if let prerequisites = resource.prerequisites {
-            entries.append(DetailEntry("Pre-requisites", prerequisites))
+            entries.append(DetailEntry(R.string.localizable.headerDetailCoursePrerequisites(), prerequisites))
         }
         if let antirequisites = resource.antirequisites {
-            entries.append(DetailEntry("Anti-requisites", antirequisites))
+            entries.append(DetailEntry(R.string.localizable.headerDetailCourseAntirequisites(), antirequisites))
         }
         if let corequisites = resource.corequisites {
-            entries.append(DetailEntry("Co-requisites", corequisites))
+            entries.append(DetailEntry(R.string.localizable.headerDetailCourseCorequisites(), corequisites))
         }
         if let instructions = resource.instructions {
             var instructionString: String = ""
@@ -95,11 +95,11 @@ class CourseDetailViewModel: DetailViewModel<CourseDetails> {
                 }
             }
             if !instructionString.isEmpty {
-                entries.append(DetailEntry("Instructions", instructionString))
+                entries.append(DetailEntry(R.string.localizable.headerDetailCourseInstructions(), instructionString))
             }
         }
         if let notes = resource.notes {
-            entries.append(DetailEntry("Notes", notes))
+            entries.append(DetailEntry(R.string.localizable.headerDetailCourseNotes(), notes))
         }
         return entries
     }

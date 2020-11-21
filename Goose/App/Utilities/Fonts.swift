@@ -13,11 +13,11 @@ import SwiftUI
 struct FontSize {
 
     static var xxxLarge: CGFloat {
-        return largeTitle * CGFloat.phi.power(of: 2)
+        return largeTitle * CGFloat.phi.power(of: 3)
     }
 
     static var xxLarge: CGFloat {
-        return largeTitle * CGFloat.phi.power(of: 1.5)
+        return largeTitle * CGFloat.phi.power(of: 2)
     }
 
     static var xLarge: CGFloat {
@@ -29,7 +29,7 @@ struct FontSize {
     }
 
     static var largeTitle: CGFloat {
-        return 34
+        return UIFont.preferredFont(forTextStyle: .largeTitle).pointSize
     }
 
     static var heading: CGFloat {
@@ -179,7 +179,7 @@ extension Font {
     }
 
     static var regularWeight: Font.Weight {
-        return .regular
+        return .medium
     }
 
 

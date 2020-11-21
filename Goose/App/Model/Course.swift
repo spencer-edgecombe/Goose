@@ -9,10 +9,13 @@
 import Foundation
 import SwiftUI
 
+
 class Course: Resource {
     static func == (lhs: Course, rhs: Course) -> Bool {
         return lhs.courseId == rhs.courseId
     }
+    
+    static let noNumberLevel: Int = -1
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(courseId)
@@ -58,6 +61,23 @@ class Course: Resource {
     }
     
     var unitsText: String {
-        return String(format: "%.1f", units)
+        let format: String
+        if (units / 0.5).truncatingRemainder(dividingBy: 2) == 1 {
+            format = "%.1f"
+        } else if (units / 0.25).truncatingRemainder(dividingBy: 2) == 1 {
+            format = "%.02f"
+        } else if Float(Int(units)) == units {
+            format = "%.0f"
+        } else {
+            format = "%.02f"
+        }
+        return String(format: format, units)
+    }
+    
+    var numberLevel: Int {
+        guard let level = Int(catalogNumber) else {
+            return Course.noNumberLevel
+        }
+        return level - level % 100
     }
 }

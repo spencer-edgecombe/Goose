@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17147" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17120"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -16,9 +16,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="goose" translatesAutoresizingMaskIntoConstraints="NO" id="pt8-yJ-FpL">
-                                <rect key="frame" x="127.5" y="368.5" width="159" height="159"/>
+                                <rect key="frame" x="126.66666666666669" y="367.66666666666669" width="161" height="161.00000000000006"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="pt8-yJ-FpL" secondAttribute="height" multiplier="1:1" id="anZ-ly-Lcz"/>
+                                    <constraint firstAttribute="width" constant="161" id="ex0-cd-hQV"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -26,7 +27,6 @@
                         <color key="backgroundColor" red="0.96461671589999998" green="0.98043805360000003" blue="0.36075183750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="pt8-yJ-FpL" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="BcL-xu-bxb"/>
-                            <constraint firstItem="pt8-yJ-FpL" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.381966" constant="1" id="T2t-0l-pV2"/>
                             <constraint firstItem="pt8-yJ-FpL" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="k6w-08-NlK"/>
                         </constraints>
                     </view>

@@ -8,7 +8,7 @@ target 'Goose' do
   # Pods for Goose
 
   pod 'Alamofire', '~> 5.0'
-
+  pod 'R.swift'
   target 'GooseTests' do
     inherit! :search_paths
     # Pods for testing

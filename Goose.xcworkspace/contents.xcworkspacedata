@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Goose/App/Views/WelcomeView.swift">
+   </FileRef>
+   <FileRef
       location = "group:Goose.xcodeproj">
    </FileRef>
    <FileRef

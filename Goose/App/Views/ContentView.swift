@@ -9,26 +9,36 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var showFirstRunModal: Bool = AppModel.shared.isFirstRun
     var body: some View {
         TabView {
             Catalog()
                 .tabItem {
                     VStack {
                         Image(systemName: "newspaper.fill")
-                        Text("Catalog")
+                        Text(R.string.localizable.titleCatalog())
                     }
                 }
             CoursePlanView()
                 .tabItem {
                     VStack {
                         Image(systemName: "heart.fill")
-                        Text("Saved")
+                        Text(R.string.localizable.titleCourseplanner())
                     }
                 }
-                
+            SettingsView()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "gearshape.fill")
+                        Text(R.string.localizable.titleSettings())
+                    }
+                }
         }
         .accentColor(.yellow)
         .font(.appSubheading)
+        .sheet(isPresented: $showFirstRunModal, content: {
+            WelcomeView(isPresented: $showFirstRunModal)
+        })
     }
 }
 

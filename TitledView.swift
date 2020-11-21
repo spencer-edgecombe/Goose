@@ -18,13 +18,17 @@ struct TitledView<Content>: View where Content: View {
         ScrollView(.vertical, showsIndicators: true) {
             VStack(alignment: .leading) {
                 Text(title)
-                    .headingFont(color: titleColor)
+                    .subheadingFont(color: titleColor)
                     .padding(.top, -.halfSpacing)
                     .padding(.leading)
                 content()
             }
             .bottomPadding()
         }
+        .background(
+            UIColor.systemGroupedBackground.color
+                .edgesIgnoringSafeArea(.all)
+        )
     }
 }
 

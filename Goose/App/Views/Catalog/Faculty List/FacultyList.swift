@@ -18,21 +18,28 @@ struct FacultyListView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: .spacing) {
-            ResourceView(viewModel: viewModel, failurePlaceholderMessage: "Couldn't Load Faculties") {
+            ResourceView(viewModel: viewModel, failurePlaceholderMessage: R.string.localizable.placeholderErrorListFaculty()) {
                 if viewModel.resources.isEmpty {
-                    NoContentPlaceholder(message: "No faculties")
+                    NoContentPlaceholder(message: R.string.localizable.placeholderEmptyListFaculty())
                 } else {
-                    List(viewModel.resources, id: \.self) { faculty in
-                        NavigationLink(destination: SubjectListView(faculty: faculty)) {
-                            FacultyRow(faculty: faculty)
+                    List {
+                        Section(header:
+                                    ListSectionHeader(text: R.string.localizable.headerListFaculty(), color: .yellow)
+                        ) {
+                            ForEach(viewModel.resources, id: \.self) { faculty in
+                                
+                                NavigationLink(destination: SubjectListView(faculty: faculty)) {
+                                    FacultyRow(faculty: faculty)
+                                }
+                                .isDetailLink(false)
+                            }
                         }
-                        .isDetailLink(false)
                     }
                     .listStyle(InsetGroupedListStyle())
                 }
             }
         }
-        .navigationTitle("Choose a faculty...")
+        .navigationTitle(R.string.localizable.titleCatalog())
     }
 }
 

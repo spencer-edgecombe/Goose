@@ -105,9 +105,9 @@ struct RefreshButton<R: Resource>: View {
             }, label: {
                 VStack {
                     Image(systemName: "arrow.clockwise")
-                        .subheadingFont(color: .blue)
+                        .subheadingFont(color: .yellow)
                     Text("Refresh")
-                        .subheadingFont(color: .blue)
+                        .subheadingFont(color: .yellow)
                 }
             })
             Spacer()
@@ -120,8 +120,54 @@ struct CustomViews_Previews: PreviewProvider {
         NavigationView {
             VStack {
                 RefreshButton(viewModel: ViewModel<Subject>(WaterlooURL(url: "")))
+                LoadingPlaceholder()
             }
             .navigationTitle("Custom Views")
         }
+    }
+}
+
+struct PlainNavigationLink<Destination, Label>: View where Destination: View, Label: View {
+    var destination: Destination
+    var label: () -> Label
+    init(destination: Destination, @ViewBuilder label: @escaping () -> Label) {
+        self.destination = destination
+        self.label = label
+    }
+    var body: some View {
+        ZStack {
+            label()
+            NavigationLink(destination: destination) {
+                EmptyView()
+            }
+            .buttonStyle(PlainButtonStyle())
+        }
+    }
+}
+
+struct ListSectionHeader: View {
+    var text: String
+    var color: Color = .secondary
+    var isPadded: Bool = true
+    let userInterfaceIdiom = UIDevice.current.userInterfaceIdiom
+    var isPadInterface: Bool {
+        return userInterfaceIdiom == .pad
+    }
+    
+    func resolvePadding() -> CGFloat {
+        if isPadded && !isPadInterface {
+            return CGFloat.spacing.negated.advanced(by: 1)
+        } else if isPadded {
+            return .zero
+        } else {
+            return .spacing
+        }
+    }
+    
+    var body: some View {
+        Text(text)
+            .leadingPadding(resolvePadding())
+            .textCase(.none)
+            .subheadingFont(color: color)
     }
 }

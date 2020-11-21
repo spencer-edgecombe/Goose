@@ -14,19 +14,20 @@ struct CourseDetailView: View {
     
     var body: some View {
         TitledView(title: viewModel.course.title, titleColor: viewModel.facultyColor) {
-            ResourceView(viewModel: self.viewModel, failurePlaceholderMessage: "Couldn't load course details") {
+            ResourceView(viewModel: self.viewModel, failurePlaceholderMessage: R.string.localizable.placeholderErrorDetailCourse()) {
                 Group {
                     ForEach(viewModel.detailEntries, id: \.self) { entry in
-                        CardView(title: entry.title, titleColor: .black, isLink: false) {
+                        CardView(title: entry.title, titleColor: .primary, isLink: false) {
                             Text(entry.description)
                                 .bodyFont(isBold: false)
                         }
+                        .horizontalPadding()
                     }
                 }
             }
         }
         .background(
-            UIColor.systemGroupedBackground.color
+            Color.background
                 .edgesIgnoringSafeArea(.all)
         )
         .navigationTitle(viewModel.course.shorthand)

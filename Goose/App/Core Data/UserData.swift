@@ -110,6 +110,10 @@ class UserData {
         }) {
             savedCourses.remove(at: index)
         }
+        guard let coursePlanViewModel = coursePlanViewModel else {
+            return true
+        }
+        coursePlanViewModel.savedCourses = savedCourses
         return true
        
     }
@@ -153,7 +157,10 @@ class UserData {
             savedCourses.sort {
                 return $0.shorthand < $1.shorthand
             }
-            
+            guard let coursePlanViewModel = coursePlanViewModel else {
+                return
+            }
+            coursePlanViewModel.savedCourses = savedCourses
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }

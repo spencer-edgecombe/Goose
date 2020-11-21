@@ -16,8 +16,15 @@ extension CGFloat {
     
     static let halfSpacing: CGFloat = spacing.half
     
+    static let doubleSpacing: CGFloat = spacing.doubled
+
+    
     var half: CGFloat {
         return self / 2.0
+    }
+    
+    var doubled: CGFloat {
+        return self.multiply(by: 2.0)
     }
     
     var inverse: CGFloat {
@@ -42,6 +49,10 @@ extension CGFloat {
     
     static var screenHeight: CGFloat {
         return UIScreen.main.bounds.height
+    }
+
+    var negated: CGFloat {
+        return -self
     }
     
 }
